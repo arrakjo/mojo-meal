@@ -10,14 +10,13 @@ function Navbar() {
   return (
     <div className="w-full flex items-center justify-between py-4 bg-[#6050AB] px-6 ">
       <Link href="/" passHref>
-        Placeholder
-        {/* <Image
+        <Image
           src="/img/logo.png"
           alt="Mojo Meal"
           width={176}
           height={42}
           className="cursor-pointer"
-        /> */}
+        />
       </Link>
       <div className="space-x-8 flex items-center">
         <a className="text-[#F7F7F7] visited:text-[#F7F7F7] " href="/trending">
