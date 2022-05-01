@@ -6,7 +6,11 @@ function MenuItem() {
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
-    setCount(count + 1);
+    if (count === 99) {
+      setCount(99);
+    } else {
+      setCount(count + 1);
+    }
   };
   const decrementCount = () => {
     if (count === 0) {
@@ -40,18 +44,18 @@ function MenuItem() {
       <div className="flex items-center space-x-5">
         <div className="flex items-center space-x-3 border rounded-lg p-2">
           <button onClick={incrementCount}>
-            <PlusIcon className="h-6" />
+            <PlusIcon className="h-6 opacity-70" />
           </button>
-          <p>{count}</p>
+          <p className="flex items-center justify-center w-4">{count}</p>
           <button onClick={decrementCount}>
-            <MinusIcon className="h-6" />
+            <MinusIcon className="h-6 opacity-70" />
           </button>
         </div>
         <div className="flex items-center">
           <p className="font-medium">€ 5.70</p>
           {count >= 1 ? (
             <button onClick={nullCount}>
-              <TrashIcon className="h-6 pl-2 text-red-300" />
+              <TrashIcon className="h-6 pl-2 text-red-400 opacity-80" />
             </button>
           ) : (
             <div className="px-4"></div>

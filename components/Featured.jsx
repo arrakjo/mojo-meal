@@ -21,7 +21,7 @@ function Featured({ title, description, src }) {
         {images.map((img, i) => (
           <div
             key={i}
-            className="w-screen relative h-[70vh] md:h-[50vh] flex duration-700 ease-in-out"
+            className="w-screen relative h-[70vh] md:h-[50vh] flex duration-1000 ease-in-out"
             style={{
               transform: `translateX(${-100 * index}vw)`,
             }}

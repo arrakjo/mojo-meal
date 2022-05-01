@@ -20,7 +20,7 @@ function Location() {
       <div className="w-full max-w-7xl shadow-lg border rounded-xl pb-5">
         {/* Restaurant Information */}
         <div className="flex flex-col">
-          <div className="relative w-full h-[300px] rounded-t-xl shadow-lg">
+          <div className="relative w-full h-[300px] rounded-t-xl shadow">
             <Image
               src={restaurant.img}
               alt={restaurant.name}
@@ -49,7 +49,13 @@ function Location() {
         {/* Menu Section */}
         <section className="flex px-5 space-x-5 py-8">
           {/* Menu Column */}
-          <div className="w-2/3 px-5 py-3 border rounded-lg">
+          <div className="w-2/3 px-5 py-3 border rounded-lg space-y-8">
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
             <MenuItem />
           </div>
           {/* Sidebar */}
