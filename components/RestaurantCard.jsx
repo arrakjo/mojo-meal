@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
 
-function RestaurantCard({ src, title, description, rating }) {
+function RestaurantCard({ src, title, description, rating, link }) {
   return (
-    <div className="flex cursor-pointer flex-col h-[240px] w-[240px] min-w-[240px] bg-white rounded-lg shadow-2xl shadow-gray-200 hover:shadow-gray-300 duration-200 ease-in-out">
+    <div
+      onClick={() => (location.href = link)}
+      className="flex cursor-pointer flex-col h-[240px] w-[240px] min-w-[240px] bg-white rounded-lg shadow-2xl shadow-gray-200 hover:shadow-gray-300 duration-200 ease-in-out"
+    >
       <div className="relative h-3/5 rounded-t-lg">
         <Image
           src={src}

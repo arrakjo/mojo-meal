@@ -21,6 +21,7 @@ function RestaurantList() {
             title="McBurger's"
             description="Bada-ba-babaa we make burgers"
             rating="4.9"
+            link="location/123"
           />
           <RestaurantCard
             src="/img/food1.jpg"

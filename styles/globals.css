@@ -6,3 +6,7 @@ html {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
+
+.font-default {
+  font-family: "Montserrat", sans-serif !important;
+}

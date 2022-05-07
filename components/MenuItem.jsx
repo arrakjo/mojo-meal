@@ -2,7 +2,7 @@ import Image from "next/image";
 import { PlusIcon, MinusIcon, TrashIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 
-function MenuItem() {
+function MenuItem({ state }) {
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
@@ -24,42 +24,28 @@ function MenuItem() {
   };
 
   return (
-    <div className="flex justify-between items-center">
+    <div
+      onClick={state}
+      className="flex relative p-3 rounded-lg cursor-pointer justify-between items-center hover:shadow-lg hover:shadow-gray-100 hover:z-40 border hover:border-[#ECECEC] border-white duration-150"
+    >
       <div className="flex space-x-3 items-center">
         <div className="flex items-center justify-center">
           <Image
             src="/img/food3.jpg"
             alt="Item"
-            width={64}
-            height={64}
+            width={184}
+            height={126}
             objectFit="cover"
             className="rounded-md"
           />
         </div>
-        <div>
-          <h1 className="font-medium">Item name</h1>
-          <p className="text-sm">Item description goes here</p>
-        </div>
-      </div>
-      <div className="flex items-center space-x-5">
-        <div className="flex items-center space-x-3 border rounded-lg p-2">
-          <button onClick={incrementCount}>
-            <PlusIcon className="h-6 opacity-70" />
-          </button>
-          <p className="flex items-center justify-center w-4">{count}</p>
-          <button onClick={decrementCount}>
-            <MinusIcon className="h-6 opacity-70" />
-          </button>
-        </div>
-        <div className="flex items-center">
-          <p className="font-medium">€ 5.70</p>
-          {count >= 1 ? (
-            <button onClick={nullCount}>
-              <TrashIcon className="h-6 pl-2 text-red-400 opacity-80" />
-            </button>
-          ) : (
-            <div className="px-4"></div>
-          )}
+        <div className="px-4">
+          <h1 className="font-medium text-xl mb-3">Item name</h1>
+          <p className="text-sm max-w-[530px]">
+            Item description goes here Item description goes here Item
+            description goes here
+          </p>
+          <p className="font-medium mt-1">€5.70</p>
         </div>
       </div>
     </div>
