@@ -85,7 +85,7 @@ function Location() {
             <MenuItem state={handleModal} />
           </div>
           {/* Sidebar */}
-          <div className="w-1/3 px-5 py-3 border rounded-lg">
+          <div className="w-1/3 h-full px-5 py-5 border rounded-lg">
             <div className="flex space-x-2 items-center pb-2">
               <ClipboardCheckIcon className="h-5" />
               <h3 className="text-lg font-medium">Your order</h3>
